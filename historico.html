@@ -9,8 +9,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="styles/styles.css" />
-  <link rel="stylesheet" href="styles/historico.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/historico.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Histórico</title>
@@ -65,7 +65,7 @@
           <tr>
             <th scope="col">
               <div class="d-flex align-items-center">
-                <p style="margin-top: 15px; margin-right: 10px;">Receptor: </p>
+                <p style="margin-top: 15px; margin-right: 10px">Receptor:</p>
                 <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Selecionar" />
                 <datalist id="datalistOptions">
                   <option value="Remédios"></option>
@@ -75,11 +75,6 @@
               </div>
             </th>
             <th>
-              <button id="botao-visualizar pedido" type="button" class="btn btn-light" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop" style="border: 1px solid #000; margin-bottom: 8px;">
-                Visualizar Pedido
-              </button>
-
               <!-- Modal -->
               <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
                 tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -127,7 +122,6 @@
               </div>
             </th>
           </tr>
-          
         </thead>
         <tbody>
           <td>
@@ -136,14 +130,18 @@
             </button>
           </td>
           <td>
-            <button type="button" class="btn btn-success" style="margin-left: 250px; margin-right: 8px;" data-bs-dismiss="modal">
+            <button type="button" class="btn btn-success" style="margin-left: 250px; margin-right: 8px"
+              data-bs-dismiss="modal">
               Pedido Entregue
             </button>
           </td>
         </tbody>
       </table>
+      <button  type="button" class="btn btn-light botao-visualizar-pedido" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop" style="border: 1px solid #000; margin-bottom: 8px;">
+        Visualizar Pedido
+      </button>
     </div>
-
 
     <div class="historico-cancelado">
       <table class="table table-no-border">
@@ -163,11 +161,6 @@
         <thead>
           <tr>
             <th>
-              <button id="botao-visualizar pedido" type="button" class="btn btn-light" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop" style="border: 1px solid #000; margin-bottom: 8px;">
-                Visualizar Pedido
-              </button>
-
               <!-- Modal -->
               <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
                 tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -215,9 +208,12 @@
               </div>
             </th>
           </tr>
-          
         </thead>
       </table>
+      <button type="button" class="btn btn-light botao-visualizar-pedido" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop" style="border: 1px solid #000; margin-bottom: 8px;">
+        Visualizar Pedido
+      </button>
     </div>
 
     <!--Pedido Finalizado-->
@@ -229,7 +225,7 @@
             <th></th>
             <th scope="col">Requisitante: Pessoa 1</th>
             <th scope="col">Veículo: Veículo 1</th>
-            <th scope="col">Status: Pendente</th>
+            <th scope="col">Status: Finalizado</th>
             <th scope="col">00/00/0000</th>
             <th scope="col">00:00</th>
           </tr>
@@ -239,15 +235,9 @@
         <thead>
           <tr>
             <th scope="col">
-                <p style="margin-top: 15px;">Receptor: Pessoa 2 </p>   
+              <p style="margin-top: 15px">Receptor: Pessoa 2</p>
             </th>
             <th>
-              
-              <button id="botao-visualizar pedido" type="button" class="btn btn-light" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop" style="border: 1px solid #000; margin-bottom: 8px; margin-left: 380px;">
-                Visualizar Pedido
-              </button>
-
               <!-- Modal -->
               <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
                 tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -275,7 +265,7 @@
                           <tbody>
                             <tr>
                               <td>0</td>
-                              <td>Item 1</td>
+                              <td>Item 2</td>
                               <td>Remédio</td>
                               <td>0mg</td>
                               <td>-</td>
@@ -295,18 +285,19 @@
               </div>
             </th>
           </tr>
-          
         </thead>
-        <tbody>
-        </tbody>
+        <tbody></tbody>
       </table>
+      <button  type="button" class="btn btn-light botao-visualizar-pedido" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop" style="border: 1px solid #000; margin-bottom: 8px;">
+        Visualizar Pedido
+      </button>
     </div>
   </div>
 
-  
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

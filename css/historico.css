@@ -40,7 +40,11 @@
     text-align: center;
 }
 
-#botao-visualizar-pedido{
-    bottom: 20px; 
-    right: 20px;
+.botao-visualizar-pedido{
+    margin-top: 20px;
+    margin-left: 575px;
+}
+
+.historico-pendente, .historico-cancelado, .historico-finalizado {
+    position: relative; /* Add this line */
 }
