@@ -1,0 +1,92 @@
+.pesquisar{
+    width: 40%;
+    color: #fff !important;
+    border: 1.5px solid  #f56060 !important;
+}
+
+.botao-analizar-pedido{
+    position: absolute;
+    bottom: 20px; 
+    right: 20px;
+    background-color:#212959 !important;
+}
+
+.botao-analizar-pedido:hover{
+    position: absolute;
+    bottom: 20px; 
+    right: 20px;
+    background-color:#406CAD !important;
+}
+
+
+.remedios{
+    justify-content: center;
+
+}
+
+.equipamentos{
+    justify-content: center;
+}
+
+.cartao-remedio{
+    
+    width: 320px;
+    height: 150px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid #000;
+    background: #F3F3F3;
+}
+
+.cartao-remedio > h6{
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+.cartao-equipamento{
+    margin-top: 10px;
+    width: 320px;
+    height: 150px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid #000;
+    background: #F3F3F3;
+}
+
+.cartao-equipamento > h6{
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-quantidade{
+    font-size: 20px;
+    background: none;
+    border: none;
+}
+.number-display {
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.container.remedios{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.container.equipamentos{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
