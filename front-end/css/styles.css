@@ -16,6 +16,19 @@ body {
 
 .nav-link:hover{
     color: #91b1e2;
+    
+    
+}
+
+#deslogar{
+    position: end;
+    margin-left: auto;
+    border: 2px solid rgb(255, 38, 38);
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+#deslogar:hover{
+    color: #f85252;
 }
 
 #pagina-atual{
