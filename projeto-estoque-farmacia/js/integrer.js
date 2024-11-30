@@ -25,29 +25,24 @@ async function postData(url, dados) {
 
 }
 
-async function ListaEquipamentos() {
-    const res = await getData("http://localhost:3000/api/equipamentos/equipamentos")
+async function ListaRemedios() {
+    const res = await getData("http://localhost:3000/api/remedios/remedios")
     console.log(res)
 
 
-    let cardEq = document.getElementById("cardsEquipamentos");
+    let remedios = document.getElementById("remedios");
 
     if (res && res.length > 0) {
-        res.forEach(equipamento => {
+        res.forEach(remedio => {
             let card = document.createElement("div");
-            card.classList.add('cartao-equipamento');
+            card.classList.add('cartao-remedio');
             card.classList.add('card');
             // Montando o conteúdo do card
             card.innerHTML = `
                 <div class="card-body">
-                    <h5 class="card-title"></h5>
-                    <p class="card-text">$</p>
-                    <a href="#" class="btn btn-primary">Ver detalhes</a>
-                </div>
-                <div class="card-body">
-                    <h6 class="card-title">${equipamento.NomeEquipamento}</h6>
-                    <h6 class="card-title">${equipamento.Quantidade}</h6>
-
+                    <h6 class="card-title">${remedio.NomeMedicamento}</h6>
+                    <h6 class="card-title">${remedio.Dosagem}</h6>
+                    <h6 class="card-title">${remedio.Unidade}</h6>
                     <div class="button-container">
                     <button type="button" class="btn btn-light button-quantidade" data-action="decrease">
                         -
@@ -59,7 +54,7 @@ async function ListaEquipamentos() {
                     </div>
                 </div>
     `;
-            cardEq.appendChild(card);
+            remedios.appendChild(card);
         });
     } else {
         // Caso não haja dados ou a resposta seja vazia
@@ -67,4 +62,4 @@ async function ListaEquipamentos() {
     }
 }
 
-ListaEquipamentos()
+ListaRemedios()
