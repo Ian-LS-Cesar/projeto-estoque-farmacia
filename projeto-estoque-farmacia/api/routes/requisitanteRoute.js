@@ -3,9 +3,9 @@ const router = express.Router();
 const requisitanteController = require('../controllers/requisitantecontroller');
 
 // Rotas CRUD para Requisitante
-router.post('/requisitantes', requisitanteController.createRequisitante); // Criar
-router.get('/requisitantes', requisitanteController.getRequisitantes); // Listar
-router.put('/requisitantes/:id', requisitanteController.updateRequisitante); // Atualizar
-router.delete('/requisitantes/:id', requisitanteController.deleteRequisitante); // Remover
+router.post('/', requisitanteController.createRequisitante); // Criar
+router.get('/', requisitanteController.getRequisitantes); // Listar
+router.put('/:id', requisitanteController.updateRequisitante); // Atualizar
+router.delete('/:id', requisitanteController.deleteRequisitante); // Remover
 
 module.exports = router;

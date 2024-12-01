@@ -23,6 +23,7 @@ const pedidoRoutes = require('../routes/pedidoRoute');
 const estadoRoutes = require('../routes/estadoRoute');
 const requisitanteRoutes = require('../routes/requisitanteRoute');
 const receptorRoutes = require('../routes/receptorRoute');
+const estoqueRoutes = require('../routes/estoqueRoute');
 
 // Configurar rotas
 app.use('/api/remedios', remediosRoutes);
@@ -35,6 +36,7 @@ app.use('/api/pedidos', pedidoRoutes);
 app.use('/api/estados', estadoRoutes);
 app.use('/api/requisitantes', requisitanteRoutes);
 app.use('/api/receptores', receptorRoutes);
+app.use('/api/estoque', estoqueRoutes);
 
 // Rota principal para checar o servidor
 app.get('/', (req, res) => {

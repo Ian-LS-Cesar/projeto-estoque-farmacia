@@ -25,15 +25,34 @@ async function postData(url, dados) {
 
 }
 
-async function EstoqueRemedios() {
-    const res = await getData("http://localhost:3000/api/remedios/remedios")
-    console.log(res)
 
+async function PesquisarRemedio() {
+    const res = await getData('http://localhost:3000/api/remedios/remedios');
+    let remediosPesquisa = document.getElementById("datalistPesquisa");
+
+    if (res && res.length > 0) {
+        res.forEach((remedio) => {
+            let opcao = document.createElement("option");
+            opcao.value = remedio.NomeMedicamento;
+            opcao.text = remedio.NomeMedicamento;
+            remediosPesquisa.append(opcao);
+        });
+
+    } else {
+        console.log('Nenhum medicamento encontrado');
+    }
+}
+
+
+async function EstoqueRemedios() {
+    const res = await getData("http://localhost:3000/api/remedios/remedios");
+    const estoque = await getData("http://localhost:3000/api/estoque");
+    console.log(res);
 
     let remedios = document.getElementById("estoque-body");
 
-    if (res && res.length > 0) {
-        res.forEach(remedio => {
+    if ((res && res.length > 0) && (estoque && estoque.length > 0)) {
+        res.forEach((remedio, indice) => {
             let tr = document.createElement("tr");
             tr.classList.add('remedio');
             tr.innerHTML = `
@@ -41,18 +60,16 @@ async function EstoqueRemedios() {
                 <td>Remédio</td>
                 <td>${remedio.Dosagem}</td>
                 <td>${remedio.Unidade}</td>
-                <td>
-                <div class="quantidade-container">
-                <span id="number" class="number-display">0</span>
-                </div>
-                </td>   
+                <td>${estoque[indice].Quantidade}</td>
             `;
             remedios.appendChild(tr);
         });
     } else {
-        // Caso não haja dados ou a resposta seja vazia
-        console.log('Nenhum equipamento encontrado');
+        
+        console.log('Nenhum medicamento encontrado');
     }
 }
 
-EstoqueRemedios();
+PesquisarRemedio();
+EstoqueRemedios()
+

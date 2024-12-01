@@ -59,21 +59,17 @@
         </tr>
         <tr>
           <td>
-            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Selecionar" />
-            <datalist id="datalistOptions">
-              <option value="Remédios"></option>
-              <option value="Equipamentos"></option>
-              <option value="Funcionários"></option>
+            <input class="form-control" list="datalistPesquisa" id="exampleDataList" placeholder="Selecionar" />
+            <datalist id="datalistPesquisa">
             </datalist>
           </td>
           <td>
-            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Escolher filtro..." />
-            <datalist id="datalistOptions">
-              <option value="Remédios"></option>
-              <option value="Equipamentos"></option>
-              <option value="Funcionários"></option>
-              <option value="Veículos"></option>
-            </datalist>
+            <select class="form-select" id="seletor-filtro"aria-label="Default select example">
+              <option value="1">Remédios</option>
+              <option value="2">Equipamentos</option>
+              <option value="3">Funcionários</option>
+              <option value="4">Veículos</option>
+            </select>
           </td>
         </tr>
       </tbody>

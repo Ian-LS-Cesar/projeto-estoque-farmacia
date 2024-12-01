@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+zdocument.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".button-quantidade");
     const numberDisplays = document.querySelectorAll(".number-display");
   
