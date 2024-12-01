@@ -27,29 +27,4 @@
     
 }
 
-.botao-voltar-pedido{
-    position: absolute;
-    bottom: 20px; 
-    left: 20px;
-}
-
-.botao-voltar-pedido:hover{
-    position: left;
-    bottom: 20px; 
-    left: 20px;
-    background-color: red;
-}
-
-.botao-confirmar-pedido{
-    position: absolute;
-    bottom: 20px; 
-    right: 20px;
-}
-
-.botao-confirmar-pedido:hover{
-    position: absolute;
-    bottom: 20px; 
-    right: 20px;
-    background-color: green;
-}
 

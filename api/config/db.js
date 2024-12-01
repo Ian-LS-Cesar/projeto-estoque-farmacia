@@ -7,9 +7,9 @@ function getConnection() {
     if (!connection) {
         connection = mysql.createConnection({
             host: 'localhost',
-            user: '',
-            password: '',
-            database: 'Farmacia'
+            user: 'ian-lucas',
+            password: 'mrcuymax',
+            database: 'Farmacia',
         });
 
         connection.connect((err) => {

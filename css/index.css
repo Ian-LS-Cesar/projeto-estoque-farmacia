@@ -5,16 +5,11 @@
 }
 
 .botao-analizar-pedido{
-    position: absolute;
-    bottom: 20px; 
-    right: 20px;
+    margin: 20px;
     background-color:#212959 !important;
 }
 
 .botao-analizar-pedido:hover{
-    position: absolute;
-    bottom: 20px; 
-    right: 20px;
     background-color:#406CAD !important;
 }
 
