@@ -3,9 +3,9 @@ const router = express.Router();
 const estadoController = require('../controllers/estadoController');
 
 // Rotas CRUD para Estado
-router.post('/estados', estadoController.createEstado); // Criar
-router.get('/estados', estadoController.getEstados); // Listar
-router.put('/estados/:id', estadoController.updateEstado); // Atualizar
-router.delete('/estados/:id', estadoController.deleteEstado); // Remover
+router.post('/', estadoController.createEstado); // Criar
+router.get('/', estadoController.getEstados); // Listar
+router.put('/:id', estadoController.updateEstado); // Atualizar
+router.delete('/:id', estadoController.deleteEstado); // Remover
 
 module.exports = router;

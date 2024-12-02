@@ -9,7 +9,7 @@ function getConnection() {
             host: 'localhost',
             user: '',
             password: '',
-            database: 'Farmacia',
+            database: 'Farmacia'
         });
 
         connection.connect((err) => {

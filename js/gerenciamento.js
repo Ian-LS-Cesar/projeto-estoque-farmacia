@@ -27,7 +27,7 @@ async function postData(url, dados) {
 
 
 async function PesquisarRemedio() {
-    const res = await getData('http://localhost:3000/api/remedios/remedios');
+    const res = await getData('http://localhost:3000/api/remedios');
     let remediosPesquisa = document.getElementById("datalistPesquisa");
 
     if (res && res.length > 0) {
@@ -45,7 +45,7 @@ async function PesquisarRemedio() {
 
 
 async function EstoqueRemedios() {
-    const res = await getData("http://localhost:3000/api/remedios/remedios");
+    const res = await getData("http://localhost:3000/api/remedios");
     const estoque = await getData("http://localhost:3000/api/estoque");
     console.log(res);
 

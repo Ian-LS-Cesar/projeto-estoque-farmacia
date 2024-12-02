@@ -53,7 +53,7 @@ async function SeletorVeiculos() {
 let carrinho = {};
 
 async function ListaRemedios() {
-    const res = await getData("http://localhost:3000/api/remedios/remedios")
+    const res = await getData("http://localhost:3000/api/remedios")
     console.log(res)
 
 

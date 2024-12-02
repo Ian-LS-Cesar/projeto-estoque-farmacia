@@ -147,7 +147,8 @@
                 </tr>
                 <tr>
                   <td>
-                    <select class="form-select" id="seletor-pessoa"aria-label="Default select example">
+                    <select class="form-select" id="seletor-pessoa"aria-label="Default select example" required>
+                      <option value="#">Selecionar Pessoa</option>
                       <option value="1">Pessoa 1</option>
                       <option value="2">Pessoa 2</option>
                       <option value="3">Pessoa 3</option>
@@ -155,7 +156,8 @@
                     </select>
                   </td>
                   <td>
-                    <select class="form-select" id="seletor-preparador"aria-label="Default select example">
+                    <select class="form-select" id="seletor-preparador"aria-label="Default select example" required>
+                      <option value="#">Selecionar Preparador</option>
                       <option value="1">Preparador 1</option>
                       <option value="2">Preparador 2</option>
                       <option value="3">Preparador 3</option>
@@ -164,6 +166,7 @@
                   </td>
                   <td>
                     <select class="form-select" id="seletor-veiculo"aria-label="Default select example">
+                      <option value="#">Selecionar Veículo</option>
                     </select>
                   </td>
                 </tr>
@@ -187,7 +190,7 @@
             </table>
             <div class="modal-footer">
               <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-              <button class="btn btn-success botao-confirmar-pedido">
+              <button class="btn btn-success" type="submit">
                 <a class="nav-link" href="index.html">Confirmar Pedido</a>
               </button>
             </div>

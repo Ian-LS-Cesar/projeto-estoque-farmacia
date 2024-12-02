@@ -3,9 +3,9 @@ const router = express.Router();
 const preOrderController = require('../controllers/PreOrdercontrollers');
 
 // Rotas CRUD para PreOrder
-router.post('/preorders', preOrderController.createPreOrder); // Criar
-router.get('/preorders', preOrderController.getPreOrders); // Listar
-router.put('/preorders/:id', preOrderController.updatePreOrder); // Atualizar
-router.delete('/preorders/:id', preOrderController.deletePreOrder); // Remover
+router.post('/', preOrderController.createPreOrder); // Criar
+router.get('/', preOrderController.getPreOrders); // Listar
+router.put('/:id', preOrderController.updatePreOrder); // Atualizar
+router.delete('/:id', preOrderController.deletePreOrder); // Remover
 
 module.exports = router;
