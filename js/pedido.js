@@ -1,4 +1,32 @@
-zdocument.addEventListener("DOMContentLoaded", function () {
+async function getData(url) {
+  const response = await fetch(url)
+  const data = await response.json();
+  return data;
+
+}
+
+async function postData(url, dados) {
+  try {
+      const response = await fetch(url,
+          {
+              method: "POST",
+              headers: {
+                  "Accept": "application/json",
+                  "Content-Type": "application/json"
+              },
+              body: JSON.stringify(dados)
+          });
+      const data = await response.json();
+      return data;
+  }
+  catch (error) {
+      console.error("Erro ao buscar dados", error);
+  }
+
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".button-quantidade");
     const numberDisplays = document.querySelectorAll(".number-display");
   
@@ -23,3 +51,4 @@ zdocument.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+SeletorVeiculos();

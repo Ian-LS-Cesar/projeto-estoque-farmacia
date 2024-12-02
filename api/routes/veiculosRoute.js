@@ -3,9 +3,9 @@ const router = express.Router();
 const veiculosController = require('../controllers/veiculoscontroller');
 
 // Rotas CRUD para Veículos
-router.post('/veiculos', veiculosController.createVeiculo);
-router.get('/veiculos', veiculosController.getVeiculos);
-router.put('/veiculos/:id', veiculosController.updateVeiculo);
-router.delete('/veiculos/:id', veiculosController.deleteVeiculo);
+router.post('/', veiculosController.createVeiculo);
+router.get('/', veiculosController.getVeiculos);
+router.put('/:id', veiculosController.updateVeiculo);
+router.delete('/:id', veiculosController.deleteVeiculo);
 
 module.exports = router;

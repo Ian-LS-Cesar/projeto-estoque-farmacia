@@ -66,7 +66,7 @@
           <button type="button" class="btn btn-light button-quantidade" data-action="decrease">
             -
           </button>
-          <span class="number-display" data-value="0">0</span>
+          <span class="display-quantidade" data-value="0">0</span>
           <button type="button" class="btn btn-light button-quantidade" data-action="increase">
             +
           </button>
@@ -142,7 +142,7 @@
                     <h5>Preparador (ID)</h5>
                   </td>
                   <td>
-                    <h5>Veículo (ID)</h5>
+                    <h5>Veículo - Número</h5>
                   </td>
                 </tr>
                 <tr>
@@ -164,10 +164,6 @@
                   </td>
                   <td>
                     <select class="form-select" id="seletor-veiculo"aria-label="Default select example">
-                      <option value="1">Veículo 1</option>
-                      <option value="2">Veículo 2</option>
-                      <option value="3">Veículo 3</option>
-                      <option value="4">Veículo 4</option>
                     </select>
                   </td>
                 </tr>
@@ -179,40 +175,14 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th scope="col" rowspan="2">Nome</th>
+                  <th scope="col">Nome</th>
                   <th scope="col">Tipo</th>
                   <th scope="col">Dosagem</th>
                   <th scope="col">Unidades</th>
                   <th scope="col">Quantidade</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>Item 1</td>
-                  <td>Remédio</td>
-                  <td>0mg</td>
-                  <td>-</td>
-                  <td>
-                    <div class="button-container">
-                      <button type="button" class="btn btn-light button-quantidade" data-action="decrease">-</button>
-                      <span class="number-display" data-value="0">0</span>
-                      <button type="button" class="btn btn-light button-quantidade" data-action="increase">+</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Item 2</td>
-                  <td>Equipamento</td>
-                  <td>-</td>
-                  <td>0</td>
-                  <td>
-                    <div class="button-container">
-                      <button type="button" class="btn btn-light button-quantidade" data-action="decrease">-</button>
-                      <span class="number-display" data-value="0">0</span>
-                      <button type="button" class="btn btn-light button-quantidade" data-action="increase">+</button>
-                    </div>
-                  </td>
-                </tr>
+              <tbody id="carrinho-lista">
               </tbody>
             </table>
             <div class="modal-footer">
@@ -229,6 +199,7 @@
       </div>
     </div>
   </div>
+
 
   <script src="js/integrer.js"></script>
   <script src="js/index.js"></script>
